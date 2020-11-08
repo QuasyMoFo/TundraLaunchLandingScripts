@@ -43,7 +43,7 @@ function missionSetup {
 
     // PayloadType Setup
     print "Payload Type: " + pType.
-    if (pType = "Cargo") {global hasFairings is true. global fairingSepAlt is 60000. set flightDone to false. cargoFlight().} // 90 timer
+    if (pType = "Cargo") {global hasFairings is true. global fairingSepAlt is 80000. cargoFlight().} // 90 timer
 
 }
 

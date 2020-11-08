@@ -6,7 +6,7 @@
 // Landing Parameters
 
 
-parameter landingZone is latlng(-0.17519274452922, -72.6814256594596).
+parameter landingZone is latlng(1.40548072330602, -71.8652543137518).
 
 
 // Initialization
@@ -84,7 +84,7 @@ brakes on.
 wait until ship:verticalspeed <-700.
     lock throttle to 1.
     lock aoa to -5.
-    lock steering to getSteering(). // Comment line when grabbing coordinates
+    lock steering to getSteering().
     toggle ag1.
     toggle ag7.
 	rcs off.
@@ -104,7 +104,7 @@ wait until alt:radar < 7000.
 
 WAIT UNTIL ship:verticalspeed < -10. 
 	rcs on.
-	when impactTime < 3.5 then {gear on.} 
+	when impactTime < 2.75 then {gear on.} 
 
 WAIT UNTIL trueRadar < stopDist. 
     lock throttle to 1.
@@ -119,6 +119,7 @@ wait until ship:verticalspeed > -45.
 
 when impactTime < 0.75 then {lock steering to heading(90, 90).}
    
-WAIT UNTIL ship:verticalspeed > -0.1. //there you go, The falcon has landed.
+WAIT UNTIL ship:verticalspeed > -0.1.
+    lock steering to up.
 	set ship:control:pilotmainthrottle to 0.
 	RCS off.
