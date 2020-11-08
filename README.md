@@ -1,4 +1,4 @@
-# TundraLaunchLandingScripts
+# Tundra Launch & Landing Scripts
 Scripts created initially by Edwin Robert, edited to work with Elixer launch script. 
 
 Elixer Discord: https://discord.gg/ukGAYUF
